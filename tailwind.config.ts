@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -24,7 +25,10 @@ const config: Config = {
       '3xl': '26px',
       '4xl': '32px',
       '5xl': '48px'
-    }
+    },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 };
