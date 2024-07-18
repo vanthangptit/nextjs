@@ -17,7 +17,7 @@ const Toggler = () => {
         className={`
           h-17px w-17px absolute transition ease-in-out duration-300 
           rounded-full bg-white dark:bg-black top-[3px] left-[4px]
-          ${currentTheme === 'light' ? 'translate-x-[12px]' : 'translate-x-[0px]'}
+          ${currentTheme === 'light' ? 'translate-x-[14px]' : 'translate-x-[0px]'}
         `}
       />
     </button>
