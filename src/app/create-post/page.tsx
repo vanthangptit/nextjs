@@ -21,7 +21,7 @@ export async function generateMetadata(
   // const previousImages = (await parent).openGraph?.images || []
 
   return {
-    title: 'Login',
+    title: 'Posts',
     // title: product.title,
     openGraph: {
       images: ['/some-specific-page-image.jpg'],
@@ -30,12 +30,12 @@ export async function generateMetadata(
   }
 }
 
-const Login = () => {
+const Posts = () => {
   return (
     <main>
-      <h1>Login Page</h1>
+      <h1>Post Page</h1>
     </main>
   );
 };
 
-export default Login;
+export default Posts;

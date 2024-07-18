@@ -3,34 +3,34 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
+import Toggler from "./Buttons/Toggler";
 
 const MENU_LIST = [
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
+  { text: "Create Post", href: "/create-post" },
+  { text: "Login", href: "/login" },
 ];
 
 const Navbar = () => {
-  const [navActive, setNavActive] = useState<boolean>();
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
-    <nav>
+    <nav className={'flex w-full gap-[20px] flex-nowrap items-center'}>
       <Link href={"/"}>
         <h1 className="logo">ThangNguyen</h1>
       </Link>
-      <div onClick={() => setNavActive(!navActive)} />
-      <div>
+      <ul className={'flex flex-auto gap-[10px] justify-end'}>
         {MENU_LIST.map((menu, idx) => (
-          <div
-            onClick={() => {
-              setActiveIdx(idx);
-              setNavActive(false);
-            }}
+          <li
+            onClick={() => setActiveIdx(idx)}
             key={menu.text}
+            className={`${activeIdx === idx ? "active" : ""}`}
           >
             <NavItem active={activeIdx === idx} {...menu} />
-          </div>
+          </li>
         ))}
+      </ul>
+      <div className={'flex items-center'}>
+        <Toggler />
       </div>
     </nav>
   );

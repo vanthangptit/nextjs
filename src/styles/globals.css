@@ -52,12 +52,13 @@
   box-sizing: border-box;
 }
 ::-moz-selection {
-  background: #bc2e1d;
+  /*background: #bc2e1d;*/
+  background: #228822;
   color: #ffffff;
   text-shadow: none;
 }
 ::selection {
-  background: #bc2e1d;
+  background: #228822;
   color: #ffffff;
   text-shadow: none;
 }
@@ -172,7 +173,8 @@ a:focus {
   outline: none;
 }
 a:hover {
-  color: #bc2e1d;
+  /*color: #bc2e1d;*/
+  color: #228822;
 }
 .ReactModal__Body--open,
 .ReactModal__Html--open {
