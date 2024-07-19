@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
-import Toggler from "./Buttons/Toggler";
+import Toggler from "./Toggler";
 
 const MENU_LIST = [
   { text: "Create Post", href: "/create-post" },

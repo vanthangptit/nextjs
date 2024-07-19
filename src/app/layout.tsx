@@ -2,10 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
-import { Layout } from '@components/Layout';
+// import { Layout } from '@components/Layout';
 const inter = Inter({ subsets: ['latin'] });
 
 import '@styles/globals.css';
+import Layout from "../components/Layout";
 
 //Note: Generate default data by this way
 export const metadata: Metadata = {
