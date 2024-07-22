@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 // import { Layout } from '@components/Layout';
@@ -10,6 +10,7 @@ import Layout from "../components/Layout";
 
 //Note: Generate default data by this way
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: 'Home | My Stories & Memoirs',
   description: 'My Stories & Memoirs',
   applicationName: 'dn-app',
@@ -98,13 +99,18 @@ export const metadata: Metadata = {
   }
 };
 
+//@todo: Double check viewport
+export const viewport: Viewport = {
+  themeColor: 'black',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class">
           <Layout>
