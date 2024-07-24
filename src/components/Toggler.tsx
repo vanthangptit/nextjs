@@ -5,13 +5,13 @@ import { useTheme } from "next-themes";
 const Toggler = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
-  const [clas, setClas] = useState<string>('translate-x-[14px]');
+  const [translated, setTranslated] = useState<string>('translate-x-[14px]');
 
   useEffect(() => {
     if (currentTheme === 'light') {
-      setClas('translate-x-[14px]');
+      setTranslated('translate-x-[14px]');
     } else {
-      setClas('translate-x-[0px]');
+      setTranslated('translate-x-[0px]');
     }
   }, [currentTheme]);
 
@@ -26,7 +26,7 @@ const Toggler = () => {
         className={`
           h-17px w-17px absolute transition ease-in-out duration-300 
           rounded-full bg-white dark:bg-black top-[3px] left-[4px]
-          ${clas}
+          ${translated}
         `}
       />
     </button>

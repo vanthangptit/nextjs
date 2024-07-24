@@ -1,14 +1,13 @@
+import '@styles/globals.css';
+
 import React from 'react';
 import { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from 'next-themes';
-// import { Layout } from '@components/Layout';
 const inter = Inter({ subsets: ['latin'] });
+import Layout from '../components/Layout';
+import Providers from './providers';
 
-import '@styles/globals.css';
-import Layout from "../components/Layout";
-
-//Note: Generate default data by this way
+//Note: Generate default metadata by this way
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   title: 'Home | My Stories & Memoirs',
@@ -29,7 +28,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  themeColor: '#ffffff',
   robots: 'max-image-preview:large',
   icons: {
     shortcut: {
@@ -96,12 +94,15 @@ export const metadata: Metadata = {
     description: 'DN – My Stories & Memoirs',
     site: "http://nguyenthangdev.com/",
     images: '/logo/logo.png',
-  }
+  },
 };
 
-//@todo: Double check viewport
+//Note: Generate default viewport by this way
 export const viewport: Viewport = {
-  themeColor: 'black',
+  initialScale: 1,
+  width: 'device-width',
+  themeColor: '#ffffff',
+  colorScheme: 'dark light'
 }
 
 export default function RootLayout({
@@ -110,13 +111,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning className="scroll-smooth">
       <body className={inter.className}>
-        <ThemeProvider attribute="class">
+        <Providers>
           <Layout>
             {children}
           </Layout>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

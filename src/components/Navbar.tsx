@@ -1,13 +1,14 @@
 'use client'
 
-import Link from "next/link";
-import React, { useState } from "react";
-import NavItem from "./NavItem";
-import Toggler from "./Toggler";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import NavItem from './NavItem';
+import Toggler from './Toggler';
 
 const MENU_LIST = [
   { text: "Create Post", href: "/create-post" },
-  { text: "Login", href: "/login" },
+  { text: "Login", href: "/auth/login" },
 ];
 
 const Navbar = () => {
@@ -16,7 +17,13 @@ const Navbar = () => {
   return (
     <nav className={'flex w-full gap-[20px] flex-nowrap items-center'}>
       <Link href={"/"}>
-        <h1 className="logo">ThangNguyen</h1>
+        <Image
+          src={'/logo/logo.png'}
+          alt={'logo'}
+          width={45}
+          height={45}
+          pripority
+        />
       </Link>
       <ul className={'flex flex-auto gap-[10px] justify-end'}>
         {MENU_LIST.map((menu, idx) => (
