@@ -22,7 +22,7 @@ const Navbar = () => {
           alt={'logo'}
           width={45}
           height={45}
-          pripority
+          priority={true}
         />
       </Link>
       <ul className={'flex flex-auto gap-[10px] justify-end'}>
