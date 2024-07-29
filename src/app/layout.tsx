@@ -2,8 +2,7 @@ import '@styles/globals.css';
 
 import React from 'react';
 import { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-const inter = Inter({ subsets: ['latin'] });
+import { Inter, Roboto_Mono } from 'next/font/google';
 import Layout from '../components/Layout';
 import Providers from './providers';
 
@@ -105,14 +104,31 @@ export const viewport: Viewport = {
   colorScheme: 'dark light'
 }
 
+//Note: Setting the font
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning className="scroll-smooth">
-      <body className={inter.className}>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={`scroll-smooth ${inter.className} ${roboto_mono.variable}`}
+    >
+      <body>
         <Providers>
           <Layout>
             {children}
