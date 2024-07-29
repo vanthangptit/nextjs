@@ -11,13 +11,14 @@ const MENU_LIST = [
   { text: "Login", href: "/auth/login" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ isFixed }: { isFixed: boolean }) => {
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
     <nav className={'flex w-full gap-[20px] flex-nowrap items-center'}>
       <Link href={"/"}>
         <Image
+          className={'lg:w-[45px] lg:h-[45px] md:w-[35px] md:h-[35px] w-[30px] h-[30px]'}
           src={'/logo/logo.png'}
           alt={'logo'}
           width={45}
@@ -32,7 +33,7 @@ const Navbar = () => {
             key={menu.text}
             className={`${activeIdx === idx ? "active" : ""}`}
           >
-            <NavItem active={activeIdx === idx} {...menu} />
+            <NavItem active={activeIdx === idx} {...menu} isFixed={isFixed} />
           </li>
         ))}
       </ul>

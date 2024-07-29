@@ -27,7 +27,7 @@ const Header = ({ spacingAside }: { spacingAside?: string }) => {
       if (window.scrollY > 85) {
         if (!IS_FIXED) {
           IS_FIXED = true;
-          setPositionLayer(`fixed animate-nav-scroll p-[${padding}px] bg-white shadow-lg`);
+          setPositionLayer(`fixed animate-nav-scroll p-[${padding}px] bg-white dark:bg-[#f1f1f1] shadow-lg`);
           setSpacing(spacingAside ?? '');
         }
       }
@@ -51,11 +51,11 @@ const Header = ({ spacingAside }: { spacingAside?: string }) => {
 
   return (
     <header
-      className={`max-w-screen-lg pt-[${padding}px] pb-[${padding}px] h-[85px]`}
+      className={`max-w-screen-lg pt-[${padding}px] pb-[${padding}px] h-[60px] md:h-[70px] lg:h-[85px]`}
     >
-      <div className={positionLayer + ' top-[0px] left-[0px] w-full flex item-center h-[85px]'}>
-        <div className={'max-w-screen-lg m-auto w-full' + spacing}>
-          <Navbar />
+      <div className={`${positionLayer} top-[0px] left-[0px] w-full flex item-center md:h-[70px] h-[60px] lg:h-[85px]`}>
+        <div className={`max-w-screen-lg m-auto w-full ${spacing}`}>
+          <Navbar isFixed={IS_FIXED} />
         </div>
       </div>
     </header>
