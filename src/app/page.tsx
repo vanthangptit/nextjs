@@ -1,9 +1,14 @@
-import React from "react";
+import React from 'react';
+import { ComponentMaxWidthScreen } from '@/components/Layout';
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
-      Home
+      <ComponentMaxWidthScreen>
+        Home
+      </ComponentMaxWidthScreen>
     </main>
   );
 }
+
+export default Home;
