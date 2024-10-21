@@ -11,7 +11,7 @@ const NavItem = ({
   isFixed: boolean;
   text: string;
   href: string;
-  active: string
+  active: boolean
 }) => {
   const [textColor, setTextColor] = useState<string>();
 
