@@ -6,6 +6,7 @@ import React, {
   useCallback
 } from 'react';
 import Navbar from './Navbar';
+import { ComponentMaxWidthScreen } from '@/components/Layout';
 
 let IS_FIXED: boolean = false;
 let SCROLL_Y: number = 0;
@@ -35,7 +36,7 @@ const Header = ({ spacingAside }: { spacingAside?: string }) => {
 
     setFirstRun(true);
     SCROLL_Y = window.scrollY;
-  }, []);
+  }, [spacingAside]);
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);
@@ -43,21 +44,23 @@ const Header = ({ spacingAside }: { spacingAside?: string }) => {
     return () => {
       window.removeEventListener('scroll', scrollHandler);
     }
-  }, []);
+  }, [scrollHandler]);
 
   useEffect(() => {
     if (!firstRun) scrollHandler();
-  }, [firstRun]);
+  }, [firstRun, scrollHandler]);
 
   return (
     <header
-      className={`max-w-screen-lg pt-[${padding}px] pb-[${padding}px] h-[60px] md:h-[70px] lg:h-[85px]`}
+      className={`pt-[${padding}px] pb-[${padding}px] h-[60px] md:h-[70px] lg:h-[85px] border-b`}
     >
-      <div className={`${positionLayer} top-[0px] left-[0px] w-full flex item-center md:h-[70px] h-[60px] lg:h-[85px]`}>
-        <div className={`max-w-screen-lg m-auto w-full ${spacing}`}>
-          <Navbar isFixed={IS_FIXED} />
+      <ComponentMaxWidthScreen>
+        <div className={`${positionLayer} top-[0px] left-[0px] w-full flex item-center md:h-[70px] h-[60px] lg:h-[85px]`}>
+          <div className={`max-w-screen-lg m-auto w-full ${spacing}`}>
+            <Navbar isFixed={IS_FIXED} />
+          </div>
         </div>
-      </div>
+      </ComponentMaxWidthScreen>
     </header>
   );
 };

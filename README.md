@@ -1,11 +1,14 @@
 #Blog Application
 Build a blog website using nextjs 14, tailwindcss
 
+## Environment
+* NodeJS: v20.9.0
+
 ## Introduce the folder structure
 
 ### 1. App folder
 * The app folder provides a clear and structured foundation for the core application code, fostering better development
-  practices, promoting code reusability, and facilitating a more maintainable and scalable Next.js project.
+  practices, promoting code re-usability, and facilitating a more maintainable and scalable Next.js project.
      * Shared layout
      * Nested routing
      * Loading states

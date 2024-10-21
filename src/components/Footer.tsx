@@ -1,9 +1,12 @@
 import React from 'react';
+import { ComponentMaxWidthScreen } from '@/components/Layout';
 
 const Footer = () => {
   return (
     <footer>
-      <h1>Footer</h1>
+      <ComponentMaxWidthScreen>
+        <h1>Footer</h1>
+      </ComponentMaxWidthScreen>
     </footer>
   );
 };

@@ -1,10 +1,23 @@
-import '@styles/globals.css';
+import '../styles/globals.css';
 
 import React from 'react';
 import { Metadata, Viewport } from 'next';
 import { Inter, Roboto_Mono } from 'next/font/google';
 import Layout from '../components/Layout';
 import Providers from './providers';
+
+// import localFont from "next/font/local";
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 //Note: Generate default metadata by this way
 export const metadata: Metadata = {
@@ -91,7 +104,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'DN – My Stories & Memoirs',
     description: 'DN – My Stories & Memoirs',
-    site: "http://nguyenthangdev.com/",
+    site: "https://nguyenthangdev.com/",
     images: '/logo/logo.png',
   },
 };

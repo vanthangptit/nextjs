@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import NavItem from './NavItem';
 import Toggler from './Toggler';
+import logoImage from '../assets/images/logo.png';
 
 const MENU_LIST = [
   { text: "Create Post", href: "/create-post" },
@@ -12,14 +13,14 @@ const MENU_LIST = [
 ];
 
 const Navbar = ({ isFixed }: { isFixed: boolean }) => {
-  const [activeIdx, setActiveIdx] = useState(-1);
+  const [activeIdx, setActiveIdx] = useState<number>(-1);
 
   return (
     <nav className={'flex w-full gap-[20px] flex-nowrap items-center'}>
       <Link href={"/"}>
         <Image
           className={'lg:w-[45px] lg:h-[45px] md:w-[35px] md:h-[35px] w-[30px] h-[30px]'}
-          src={'/logo/logo.png'}
+          src={logoImage}
           alt={'logo'}
           width={45}
           height={45}

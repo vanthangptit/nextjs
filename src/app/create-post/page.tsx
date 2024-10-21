@@ -1,10 +1,14 @@
 import React from 'react';
-import { Viewport } from "next";
+import Image from 'next/image';
 
 const CreatePost = () => {
   return (
     <div>
-      Create post
+      <h1>Create post</h1>
+      <Image
+        src={'breakpoint-tailwind.png'}
+        alt="Picture of the author"
+      />
     </div>
   );
 };

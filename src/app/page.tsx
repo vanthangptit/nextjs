@@ -1,9 +1,12 @@
 import React from 'react';
+import { ComponentMaxWidthScreen } from '@/components/Layout';
 
 const Home = () => {
   return (
     <main>
-      Home
+      <ComponentMaxWidthScreen>
+        Home
+      </ComponentMaxWidthScreen>
     </main>
   );
 }
