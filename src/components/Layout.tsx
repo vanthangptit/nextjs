@@ -6,14 +6,6 @@ interface ILayoutProps {
   children: React.ReactNode
 }
 
-export const ComponentMaxWidthScreen = ({ children }) => {
-  return (
-    <div className={"max-w-screen-lg m-auto"}>
-      {children}
-    </div>
-  )
-};
-
 const Layout: React.FC<ILayoutProps> = ({ children }) => {
   const spacingAside: string = 'pl-[20px] pr-[20px]';
   return (

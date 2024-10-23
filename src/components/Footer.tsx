@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMaxWidthScreen } from '@/components/Layout';
+import ComponentMaxWidthScreen from '@/components/shared/componentMaxWidthScreen';
 
 const Footer = () => {
   return (

@@ -5,11 +5,12 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import NavItem from './NavItem';
 import Toggler from './Toggler';
-import logoImage from '../assets/images/logo.png';
+import logoImage from '@/images/logo.png';
 
 const MENU_LIST = [
   { text: "Create Post", href: "/create-post" },
   { text: "Login", href: "/auth/login" },
+  { text: "Signup", href: "/auth/signup" },
 ];
 
 const Navbar = ({ isFixed }: { isFixed: boolean }) => {

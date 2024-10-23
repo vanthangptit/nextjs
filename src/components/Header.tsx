@@ -6,7 +6,7 @@ import React, {
   useCallback
 } from 'react';
 import Navbar from './Navbar';
-import { ComponentMaxWidthScreen } from '@/components/Layout';
+import ComponentMaxWidthScreen from '@/components/shared/componentMaxWidthScreen';
 
 let IS_FIXED: boolean = false;
 let SCROLL_Y: number = 0;
