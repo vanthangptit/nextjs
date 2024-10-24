@@ -22,11 +22,15 @@
       "@/components/*": ["./src/components/*"],
       "@/configs/*": ["./src/configs/*"],
       "@/context/*": ["./src/context/*"],
+      "@/database/*": ["./src/database/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/middlewares/*": ["./src/middlewares/*"],
-      "@/services/*": ["./src/services/*"],
+      "@/modular/*": ["./src/modular/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/utils/*": ["./src/utils/*"],
+      "@/constants/*": ["./src/utils/constants/*"],
+      "@/enums/*": ["./src/utils/enums/*"],
+      "@/helpers/*": ["./src/utils/helpers/*"],
+      "@/types/*": ["./src/utils/types/*"],
       "@/images/*": ["./src/assets/images/*"],
       "@/fonts/*": ["./src/assets/fonts/*"]
     }
